@@ -1,0 +1,97 @@
+<?php
+
+
+/**
+ * class FormLogin
+ *
+ */
+class FormRegister extends Form
+{
+
+  /** Aggregations: */
+
+  /** Compositions: */
+
+   /*** Attributes: ***/
+
+   /**
+   *
+   * @access public
+   */
+   public $name = [
+     'field' => 'input',
+     'type' => 'text',
+     'name' => 'name',
+     'attributes' => [
+       'placeholder' => 'Votre nom complet',
+     ],
+   ];
+
+  /**
+   *
+   * @access public
+   */
+  public $email = [
+    'field' => 'input',
+    'type' => 'email',
+    'name' => 'email',
+    'attributes' => [
+      'placeholder' => 'Votre e-mail',
+      'require' => TRUE,
+    ],
+  ];
+
+  /**
+   *
+   * @access public
+   */
+  public $pass = [
+    'field' => 'input',
+    'type' => 'password',
+    'name' => 'pass',
+    'attributes' => [
+      'placeholder' => 'Votre pass',
+      'require' => TRUE,
+    ],
+  ];
+
+
+  /**
+   *
+   * @access public
+   */
+  public $localisation = [
+    'field' => 'in/**
+   *
+   * @access public
+   */
+   public $name = [
+     'field' => 'input',
+     'type' => 'text',
+     'name' => 'name',
+     'attributes' => [
+       'placeholder' => 'Votre nom complet',
+     ],
+   ];put',
+    'type' => 'text',
+    'name' => 'localisation',
+    'attributes' => [
+      'placeholder' => 'Votre Ville',
+    ],
+  ];
+
+  /**
+   *
+   * @access public
+   */
+  public $age = [
+    'field' => 'input',
+    'type' => 'number',
+    'name' => 'age',
+    'attributes' => [
+      'placeholder' => 'Votre age',
+    ],
+  ];
+
+} // end of FormLogin
+?>
