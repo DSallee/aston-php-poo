@@ -49,6 +49,8 @@
   $user->create = time(); // date de création du user
   $user->update = time(); // date de maj du user
 
+
+
   // Afficher la liste des valeurs des variables des champs du formulaire
   print '<pre>';
   print_r($user);
