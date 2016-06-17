@@ -1,6 +1,11 @@
 <?php
   /***********************************************************************/
 
+  require_once 'core/Autoloader.php'
+
+  Autoloader::register();
+
+  /**********************************************************************/
   /*require_once 'base/Form.php';
   require_once 'base/FormRegister.php';
   require_once 'base/FormLogin.php';
@@ -12,6 +17,18 @@
 
   /*function __autoload($class_name) {
     require_once 'base/' . $class_name . '.php';
+  }*/
+
+  // use \Bundle\User\;
+
+  /*spl_autoload_register('autoload');
+
+  function autoload($class){
+
+    print '<pre>$class => <br />';
+    print_r($class);
+    print "</pre>";
+    print '<code><em>From class ' . __CLASS__ . ' in function ' . __FUNCTION__ . '() line ' . __LINE__ . ' in file ' . __FILE__ . '</em>.</code>';
   }*/
 
 
