@@ -1,11 +1,6 @@
 <?php
 
 // Hydratation
-
-/**
- * class FormLogin
- *
- */
 class FormLogin extends Form
 {
 
@@ -15,10 +10,6 @@ class FormLogin extends Form
 
    /*** Attributes: ***/
 
-  /**
-   *
-   * @access public
-   */
   public $email = [
     'field' => 'input',
     'type' => 'email',
@@ -28,10 +19,6 @@ class FormLogin extends Form
     ],
   ];
 
-  /**
-   *
-   * @access public
-   */
   public $pass = [
     'field' => 'input',
     'type' => 'password',

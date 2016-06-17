@@ -4,6 +4,7 @@
   require_once 'base/Form.php';
   require_once 'base/FormRegister.php';
   require_once 'base/FormLogin.php';
+  require_once 'base/Entity.php';
   require_once 'base/UserManager.php';
   require_once 'base/UserEntity.php';
 
@@ -34,11 +35,11 @@
   $user = UserEntity::create($_POST)->save();
 
   /*debug + TAB: Affiche le code de debuggage grace
-     au fichier snippets.cson*/
+     au fichier snippets.cson
   print '<pre>$user => <br />';
   print_r($user);
   print "</pre>";
-  print '<code><em>From class ' . __CLASS__ . ' in function ' . __FUNCTION__ . '() line ' . __LINE__ . ' in file ' . __FILE__ . '</em>.</code>';
+  print '<code><em>From class ' . __CLASS__ . ' in function ' . __FUNCTION__ . '() line ' . __LINE__ . ' in file ' . __FILE__ . '</em>.</code>';*/
 
   //2//
   //$user = new UserEntity($_POST); //methode d'hydratation
@@ -51,7 +52,7 @@
   $user->age = $_POST['age'];*/
 
 
-  $user->save();
+  // $user->save();
 
 
   /***********************************************************************/

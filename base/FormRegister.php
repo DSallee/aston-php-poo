@@ -1,12 +1,7 @@
 <?php
 
 // Hydratation
-
-/**
- * class FormLogin
- *
- */
-class FormRegister extends Form
+class FormRegister extends Form // extends
 {
 
   /** Aggregations: */
@@ -15,10 +10,7 @@ class FormRegister extends Form
 
    /*** Attributes: ***/
 
-  /**
-   *
-   * @access public
-   */
+
   public $email = [
     'field' => 'input',
     'type' => 'email',
@@ -29,10 +21,7 @@ class FormRegister extends Form
     ],
   ];
 
-  /**
-   *
-   * @access public
-   */
+
   public $pass = [
     'field' => 'input',
     'type' => 'password',
@@ -43,10 +32,7 @@ class FormRegister extends Form
     ],
   ];
 
-  /**
-   *
-   * @access public
-   */
+
   public $name = [
     'field' => 'input',
     'type' => 'text',
@@ -56,10 +42,7 @@ class FormRegister extends Form
     ],
   ];
 
-  /**
-   *
-   * @access public
-   */
+
   public $localisation = [
     'field' => 'input',
     'type' => 'text',
@@ -69,10 +52,7 @@ class FormRegister extends Form
     ],
   ];
 
-  /**
-   *
-   * @access public
-   */
+
   public $age = [
     'field' => 'input',
     'type' => 'number',

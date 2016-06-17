@@ -18,7 +18,6 @@ class Form
 
       $form_markup .= $this->generateField($field);
     }
-
     $form_markup .= '</form><br /><br />';
 
     return $form_markup;
