@@ -1,12 +1,14 @@
 <?php
 
-class UserManager {
+class EntityManager {
 
   private $_db;
+  protected $table;
 
-  public function __construct($db) {
+  final public function __construct($db) {
 
     $this->_db = $db; // $this est utilisé pour un objet (self pour  les classes)
+    $this->table = lcfirst(str_replace('Manager','', get_called_class()));
   }
 
   public function flush(UserEntity $user) {
@@ -15,11 +17,16 @@ class UserManager {
       //UPDATE
     } else {
 
-      $query = $this->_db->prepare('
-      INSERT
-      INTO user(name, email, localisation, age, `created`, `update`)
-      VALUES (:name, :email, :localisation, :age, NOW(), NOW())');
+      $query = $this->_db->prepare('INSERT INTO {$this->table}(';
+      $properties = [];
 
+      foreach ($entity as $key => $value) {
+        $properties[] = $value;
+      }
+
+      $query_string .= implode(', ', $properties) . ') VALUES (';
+
+      /*
       $query->bindParam(':name', $user->name);
       $query->bindParam(':email', $user->email);
       $query->bindParam(':localisation', $user->localisation);
@@ -27,9 +34,10 @@ class UserManager {
       $query->execute();
 
       print_r($query->errorInfo());
+      */
       //INSERT
     }
-    
+
   }
 
 }

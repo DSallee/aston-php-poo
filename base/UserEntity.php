@@ -1,8 +1,10 @@
 <?php
 
+namespace \Bundle\User\
+
 class UserEntity extends Entity
 {
-  
+
    /*** Attributes: ***/
   public $id;
 

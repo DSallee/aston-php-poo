@@ -22,9 +22,9 @@ abstract class Entity implements ContentEntityInterface
   public static $create($data){
 
     $entity = get_called_class();
-    return self::hydrate($data, new $entity);
+    return self::hydrate($data new $entity);
     /*debug + TAB: Affiche le code de debuggage grace au fichier snippets.cson*/
-  };
+  }
 
   public function delete($data) {
   }
@@ -44,7 +44,6 @@ abstract class Entity implements ContentEntityInterface
     $manager->flush($this);
     return $this;
   }
-
 
   public function load() {
   }

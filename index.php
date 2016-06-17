@@ -1,12 +1,18 @@
 <?php
   /***********************************************************************/
 
-  require_once 'base/Form.php';
+  /*require_once 'base/Form.php';
   require_once 'base/FormRegister.php';
   require_once 'base/FormLogin.php';
+  require_once 'base/ContentEntityInterface.php';
+  require_once 'base/EntityManager.php';
   require_once 'base/Entity.php';
   require_once 'base/UserManager.php';
-  require_once 'base/UserEntity.php';
+  require_once 'base/UserEntity.php';*/
+
+  /*function __autoload($class_name) {
+    require_once 'base/' . $class_name . '.php';
+  }*/
 
 
   /******* Affichage des formulaires par une methode d'Hydratation *******/
