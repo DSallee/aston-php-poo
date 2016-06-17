@@ -1,5 +1,6 @@
 <?php
 
+// Hydratation
 
 /**
  * class FormLogin
@@ -13,19 +14,6 @@ class FormRegister extends Form
   /** Compositions: */
 
    /*** Attributes: ***/
-
-   /**
-   *
-   * @access public
-   */
-   public $name = [
-     'field' => 'input',
-     'type' => 'text',
-     'name' => 'name',
-     'attributes' => [
-       'placeholder' => 'Votre nom complet',
-     ],
-   ];
 
   /**
    *
@@ -55,24 +43,25 @@ class FormRegister extends Form
     ],
   ];
 
+  /**
+   *
+   * @access public
+   */
+  public $name = [
+    'field' => 'input',
+    'type' => 'text',
+    'name' => 'name',
+    'attributes' => [
+      'placeholder' => 'Votre nom complet',
+    ],
+  ];
 
   /**
    *
    * @access public
    */
   public $localisation = [
-    'field' => 'in/**
-   *
-   * @access public
-   */
-   public $name = [
-     'field' => 'input',
-     'type' => 'text',
-     'name' => 'name',
-     'attributes' => [
-       'placeholder' => 'Votre nom complet',
-     ],
-   ];put',
+    'field' => 'input',
     'type' => 'text',
     'name' => 'localisation',
     'attributes' => [
@@ -94,4 +83,3 @@ class FormRegister extends Form
   ];
 
 } // end of FormLogin
-?>

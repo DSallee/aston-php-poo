@@ -8,12 +8,6 @@
 class Form
 {
 
-  /*public function __construct() {
-
-    parent::__construct;
-    print 'Hello world !';
-  }*/
-
   public function render() {
 
     $child_class = get_called_class();
@@ -25,7 +19,7 @@ class Form
       $form_markup .= $this->generateField($field);
     }
 
-    $form_markup .= '</form><br><br>';
+    $form_markup .= '</form><br /><br />';
 
     return $form_markup;
   }
@@ -44,13 +38,13 @@ class Form
     if ($field['field'] == 'input') {
 
       $tag_open = '<' . $field['field'] . ' type="' . $field['type'] . '" ';
-      $tag_close = ' /><br><br>';
+      $tag_close = ' /><br /><br />';
 
     }
     elseif ($field['field'] == 'textarea') {
 
       $tag_open = '<' . $field['field'] . '>';
-      $tag_close = '</' . $field['field'] . '><br><br>';
+      $tag_close = '</' . $field['field'] . '><br /><br />';
 
     }
 

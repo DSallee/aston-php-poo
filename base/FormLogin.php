@@ -1,5 +1,6 @@
 <?php
 
+// Hydratation
 
 /**
  * class FormLogin
@@ -40,7 +41,4 @@ class FormLogin extends Form
     ],
   ];
 
-
-
 } // end of FormLogin
-?>

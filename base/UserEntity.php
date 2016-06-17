@@ -40,11 +40,15 @@ class UserEntity
 
   /**
    *
+   *
+   *
    * @access public
    */
   public $age;
 
   /**
+   *
+   *
    *
    * @access public
    */
@@ -62,43 +66,57 @@ class UserEntity
    */
   public $update;
 
+  private function hydrate($data, $entity) {
+
+    $user = new UserEntity;
+
+    foreach ($data as $property => $value) {
+      if (property_exists(__CLASS__, $property)){
+        $entity->$property = $value;
+      }
+    }
+
+    return $user;
+  }
 
   /**
    *
    *
+   * @return void
    * @access public
    */
-  public function create() {
+  public static function create($data) {
+      $user = self::hydrate($data); // self est utilisé pour une class ($this pour les objets)
+      return $user;
   } // end of member function create
 
   /**
    *
    *
+   * @return void
    * @access public
    */
   public function delete() {
   } // end of member function delete
 
   /**
-   * La méthode save() permet de sauvegarder les informations de l'utilisateur en
-   * base de données.
+   * La méthode save permet de sauvegarder les informations de l'utilisateur
+   * en base de donnée.
    *
    * @access public
    */
   public function save() {
 
-    $bdd = new PDO('mysql:host=localhost; dbname=aston', 'root', 'paris');
-    $manager = new UserManager($bdd);
-    $manager->flush($this); /* flush(): vérifie les informations inserer dans la base de données
-                            *  via la methode post du formulaire.
-                            *   si le user est créé, mets à jour les données;
-                            *   si le user n'est pas créé, il le fait avec un INSERT.
-                            */
+    $db = new PDO('mysql:host=localhost;dbname=aston', 'root', 'paris');
+    $manager = new UserManager($db);
+    $manager->flush($this);
+
   } // end of member function save
 
   /**
    *
    *
+   * @return void
    * @access public
    */
   public function load() {
@@ -107,6 +125,7 @@ class UserEntity
   /**
    *
    *
+   * @return void
    * @access public
    */
   public function connect() {
@@ -115,6 +134,7 @@ class UserEntity
   /**
    *
    *
+   * @return void
    * @access public
    */
   public function logout() {
@@ -125,4 +145,3 @@ class UserEntity
 
 
 } // end of User
-?>
