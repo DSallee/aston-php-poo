@@ -18,13 +18,12 @@ class UserManager {
         $query = $this->_db->prepare('
         INSERT
         INTO user(name, email, localisation, age, `created`, `update`)
-        VALUES (:name, :email, :age, NOW(), NOW())');
+        VALUES (:name, :email, :localisation, :age, NOW(), NOW())');
 
         $query->bindParam(':name', $user->name);
         $query->bindParam(':email', $user->email);
         $query->bindParam(':localisation', $user->localisation);
         $query->bindParam(':age', $user->age);
-
         $query->execute();
 
         print_r($query->errorInfo());

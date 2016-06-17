@@ -86,8 +86,14 @@ class UserEntity
    * @access public
    */
   public static function create($data) {
-      $user = self::hydrate($data); // self est utilisé pour une class ($this pour les objets)
-      return $user;
+
+      return self::hydrate($data, new UserEntity);
+
+      // ou //
+
+      /*$class = __CLASS__;
+      $user = self::hydrate($data, new $class); // self est utilisé pour une class ($this pour les objets)
+      return $user;*/
   } // end of member function create
 
   /**
@@ -110,6 +116,7 @@ class UserEntity
     $db = new PDO('mysql:host=localhost;dbname=aston', 'root', 'paris');
     $manager = new UserManager($db);
     $manager->flush($this);
+    return $this;
 
   } // end of member function save
 

@@ -30,17 +30,15 @@
     'age' => '29',
   ];
 
-  /* debug + TAB: Affiche le code de debuggage grace
-  *               au fichier snippets.cson
-  *
-  * print '<pre>$_POST => <br />';
-  * print_r($_POST);
-  * print "</pre>";
-  * print '<code><em>From class ' . __CLASS__ . ' in function ' . __FUNCTION__ . '() line ' . __LINE__ . ' in file ' . __FILE__ . '</em>.</code>';
-  */
-
   //1//
-  $user = UserEntity::create($_POST);
+  $user = UserEntity::create($_POST)->save();
+
+  /*debug + TAB: Affiche le code de debuggage grace
+     au fichier snippets.cson*/
+  print '<pre>$user => <br />';
+  print_r($user);
+  print "</pre>";
+  print '<code><em>From class ' . __CLASS__ . ' in function ' . __FUNCTION__ . '() line ' . __LINE__ . ' in file ' . __FILE__ . '</em>.</code>';
 
   //2//
   //$user = new UserEntity($_POST); //methode d'hydratation
